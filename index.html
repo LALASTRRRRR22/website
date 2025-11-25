@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Портфолио — Liquid Glass</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+</head>
+<body>
+  <div class="bg-photos" aria-hidden="true">
+    <div class="bg-photo active" data-section="works"
+      style="--bg-img: url('https://i.pinimg.com/736x/ae/d1/c0/aed1c0c585623c5c2ba8f68246a9a628.jpg');"></div>
+    <div class="bg-photo" data-section="drawings"
+      style="--bg-img: url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80&sat=-40');"></div>
+    <div class="bg-photo" data-section="models"
+      style="--bg-img: url('https://images.unsplash.com/photo-1527430253228-e93688616381?auto=format&fit=crop&w=1600&q=80&sat=-30');"></div>
+    <div class="bg-photo" data-section="about"
+      style="--bg-img: url('https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=1600&q=80&sat=-30');"></div>
+    <div class="bg-photo" data-section="contact"
+      style="--bg-img: url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1600&q=80&sat=-40');"></div>
+  </div>
+  <div class="bg-orbs" aria-hidden="true">
+    <span class="orb orb--one"></span>
+    <span class="orb orb--two"></span>
+    <span class="orb orb--three"></span>
+    <span class="orb orb--four"></span>
+  </div>
+  <canvas class="bg-canvas" aria-hidden="true"></canvas>
+
+  <header class="glass panel header">
+    <div class="brand">
+      <div class="brand__dot"></div>
+      <div>
+        <p class="eyebrow">3D дизайнер и программист</p>
+        <p class="brand__name">Сайт с моими работами</p>
+      </div>
+    </div>
+    <nav class="tabs" aria-label="Основная навигация">
+      <button class="tab active" type="button" data-target="works">Работы</button>
+      <button class="tab" type="button" data-target="drawings">Рисунки</button>
+      <button class="tab" type="button" data-target="models">3D</button>
+      <button class="tab" type="button" data-target="about">Обо мне</button>
+      <button class="tab" type="button" data-target="contact">Контакты</button>
+    </nav>
+    <a class="cta" href="assets/portfolio.pdf" download>Скачать портфолио</a>
+  </header>
+
+  <main>
+    <section id="works" class="section active">
+      <div class="section__head">
+        <p class="eyebrow">Проекты</p>
+        <h1>Приветствую </h1>
+        <p class="muted">Ниже описание сайта</p>
+      </div>
+      <div class="grid">
+        <article class="card glass reveal" data-image="https://avatars.mds.yandex.net/i?id=2344bd91274d96ab231abc138f23bd5089ab2f0c-8963933-images-thumbs&n=13" data-title="Интерактивная галерея">
+          <p class="eyebrow"></p>
+          <h3>Blur</h3>
+          <p>Решил сделать заблюреный фон, так как выглядит прикольно.</p>
+          <div class="tags">
+            <span>HTML</span><span>CSS</span>
+          </div>
+          <button type="button" class="ghost" data-open>Открыть макет</button>
+        </article>
+        <article class="card glass reveal" data-image="https://avatars.mds.yandex.net/i?id=e66c672ff707789ed5cf785a7d32697d0ccd039a-9862264-images-thumbs&n=13" data-title="Плавные переходы">
+          <p class="eyebrow"></p>
+          <h3>Рабочие вкладки</h3>
+          <p>На сайте сделаны вкладки с каждым разделом моих работ</p>
+          <div class="tags">
+            <span>Transitions</span><span>Micro UX</span>
+          </div>
+          <button type="button" class="ghost" data-open>Посмотреть превью</button>
+        </article>
+        <article class="card glass reveal highlight" data-image="https://avatars.mds.yandex.net/i?id=01b3fbd4eaf70324060554fe80521b874c5e5d23-15405986-images-thumbs&n=13" data-title="Liquid Glass UI Kit">
+          <p class="eyebrow">Формы</p>
+          <h3>Форма обратной связи</h3>
+          <p>Пока ещё не доделанная фича</p>
+          <div class="tags">
+            <span>Glassmorphism</span><span>Components</span><span>Responsive</span>
+          </div>
+          <button type="button" class="ghost" data-open>Скачать превью</button>
+        </article>
+      </div>
+    </section>
+
+    <section id="drawings" class="section">
+      <div class="section__head">
+        <p class="eyebrow"></p>
+        <h2>Мои рисунки и ручные работы</h2>
+        <p class="muted">Ниже представлена большая часть моих рисунков, оставшиеся пока что еще не добавил.</p>
+      </div>
+      <div class="gallery">
+        <div class="tile glass tile--frame reveal loaded" data-image="assets/drawings/drawing1.jpg" data-title="Командный проход">
+          <img src="assets/drawings/drawing1.jpg" alt="Командный проход" />
+          <div class="tile__label">The Judgement Hall</div>
+        </div>
+        <div class="tile glass tile--frame reveal loaded" data-image="assets/drawings/drawing2.jpg" data-title="Сердце">
+          <img src="assets/drawings/drawing2.jpg" alt="Сердце" />
+          <div class="tile__label">Chara</div>
+        </div>
+        <div class="tile glass tile--frame reveal loaded" data-image="assets/drawings/drawing3.jpg" data-title="Очки">
+          <img src="assets/drawings/drawing3.jpg" alt="Очки" />
+          <div class="tile__label">Scientist Sans</div>
+        </div>
+        <div class="tile glass tile--frame reveal loaded" data-image="assets/drawings/drawing4.jpg" data-title="Красный шарф">
+          <img src="assets/drawings/drawing4.jpg" alt="Красный шарф" />
+          <div class="tile__label">Geno sans</div>
+        </div>
+
+        <div class="tile glass tile--frame reveal loaded" data-image="assets/drawings/drawing6.jpg" data-title="Атака">
+          <img src="assets/drawings/drawing6.jpg" alt="Атака" />
+          <div class="tile__label">After death</div>
+        </div>
+        <div class="tile glass tile--frame reveal loaded" data-image="assets/drawings/drawing7.jpg" data-title="Комикс">
+          <img src="assets/drawings/drawing7.jpg" alt="Комикс" />
+          <div class="tile__label">Comics</div>
+        </div>
+        <div class="tile glass tile--frame reveal loaded" data-image="assets/drawings/drawing8.jpg" data-title="В капюшоне">
+          <img src="assets/drawings/drawing8.jpg" alt="В капюшоне" />
+          <div class="tile__label">Dust sans</div>
+        </div>
+        <div class="tile glass tile--frame reveal loaded" data-image="assets/drawings/drawing9.jpg" data-title="Защитник">
+          <img src="assets/drawings/drawing9.jpg" alt="Защитник" />
+          <div class="tile__label">Ink sans</div>
+        </div>
+      </div>
+      <div class="uploader glass reveal">
+        <div>
+          <p class="eyebrow">Добавить свою работу</p>
+          <h3>Загрузите свою работу одной кнопкой</h3>
+          <p class="muted">Выберите изображения со своего компьютера, оно сразу отобразиться на сайте, однако при его обновлении пропадет.</p>
+        </div>
+        <div class="uploader__actions">
+          <input id="photo-upload" type="file" accept="image/*" multiple hidden />
+          <button type="button" class="cta" id="upload-trigger">Добавить фотографии</button>
+          <p class="helper">Файлы не сохраняются на сервере и исчезнут после обновления страницы.</p>
+        </div>
+      </div>
+      <div class="upload-grid gallery" aria-live="polite">
+        <div class="tile glass tile--frame placeholder" aria-hidden="true">
+          <p>Загрузите фото — они появятся здесь</p>
+        </div>
+        <div class="tile glass tile--frame placeholder" aria-hidden="true"></div>
+        <div class="tile glass tile--frame placeholder" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <section id="models" class="section">
+      <div class="section__head">
+        <p class="eyebrow"></p>
+        <h2>3D модели</h2>
+        <p class="muted">можно посмотреть 3D модель прямо на сайте</p>
+      </div>
+      <div class="model-wrapper glass reveal">
+        <model-viewer src="https://modelviewer.dev/shared-assets/models/Astronaut.glb"
+          camera-controls
+          auto-rotate
+          shadow-intensity="0.8"
+          exposure="1.1"
+          ar
+          ar-modes="webxr scene-viewer quick-look">
+        </model-viewer>
+        <div class="model-meta">
+          <h3>Астронавт</h3>
+          <p>К примеру я взял модель астронавта из интернета, позже я добавлю сюда свои модели</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="section__head">
+        <p class="eyebrow">Обо мне</p>
+        <h2>Я люблю рисоавть и делать 3D модели, поэтому решил создать данный сайт чтобы они были хоть где-то помимо телеграмма</h2>
+        <p class="muted"></p>
+      </div>
+      <div class="grid">
+        <article class="card glass reveal">
+          <h3>Программы в которых я работаю</h3>
+          <p>Figma, Blender, VS code, Adobe Animate, Adobe Photoshop</p>
+        </article>
+        <article class="card glass reveal">
+          <h3>О себе</h3>
+          <p>Большую часть своего времени я провожу за компом, оставшееся в колледже</p>
+        </article>
+        <article class="card glass reveal">
+          <h3>О моих увлечениях и профессии</h3>
+          <p>Я начинающий программист, художник и 3D дизайнер, в будущем хочу податься в Game design</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="section__head">
+        <p class="eyebrow">Контакты</p>
+        <h2>Напишите мне на почту или в тг</h2>
+        <p class="muted"></p>
+      </div>
+      <div class="contact glass reveal">
+        <div>
+          <h3>Быстрая связь</h3>
+          <p>Почта: <a href="mailto:hello@example.com">umbral284@gmail.com</a></p>
+          <p>Telegram: <a href="https://t.me/username" target="_blank" rel="noreferrer">@kopsteek</a></p>
+        </div>
+        <form class="contact__form" action="https://formspree.io/f/mzzbpprp" method="POST">
+          <label>
+            Ваш e-mail
+            <input type="email" name="email" placeholder="you@example.com" required />
+          </label>
+          <label>
+            Сообщение
+            <textarea name="message" rows="3" placeholder="Привет! Хочу обсудить проект" required></textarea>
+          </label>
+          <button type="submit" class="cta">Отправить</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer glass panel">
+    <p>Создано мной на HTML/CSS/JS</p>
+    <div class="dots" aria-hidden="true">
+      <span></span><span></span><span></span>
+    </div>
+  </footer>
+
+  <div class="lightbox" role="dialog" aria-modal="true" aria-label="Просмотр изображения">
+    <button class="lightbox__close" aria-label="Закрыть предпросмотр">×</button>
+    <div class="lightbox__body glass">
+      <img src="" alt="" />
+      <p class="lightbox__caption"></p>
+      <a class="cta" href="#" download>Скачать оригинал</a>
+    </div>
+  </div>
+
+  <script src="js/java.js"></script>
+</body>
+</html>
