@@ -6,7 +6,7 @@
   --glass-strong: rgba(255, 255, 255, 0.86);
   --border: rgba(130, 155, 200, 0.3);
   --text: #1e2433;
-  --muted: #1e2433;
+  --muted: #556070;
   --accent: linear-gradient(135deg, #6fd6ff, #a788ff 50%, #ff9ad1);
   --card: rgba(255, 255, 255, 0.9);
   --shadow: 0 24px 60px rgba(90, 115, 165, 0.22);
@@ -142,6 +142,13 @@ p { color: var(--text); line-height: 1.6; }
 .ghost:focus-visible { outline: 2px solid rgba(99, 200, 255, 0.6); outline-offset: 3px; }
 
 .section__head { margin-bottom: 26px; }
+
+.section--works .section__head {
+  text-align: center;
+  display: grid;
+  justify-items: center;
+  gap: 6px;
+}
 
 .grid {
   display: grid;
